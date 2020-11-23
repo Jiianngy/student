@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Map;
 
-@Repository("UserDao")
 public interface UserDao {
      public User login(@Param("username") String username, @Param("password") String password);
 //     int create (User user);

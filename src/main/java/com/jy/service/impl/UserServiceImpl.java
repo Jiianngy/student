@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
 
-@Service("UserService")
+@Service
 public class UserServiceImpl implements UserService {
-    @Resource(name = "UserDao")
+    @Resource
     private UserDao dao;
 
     @Override
