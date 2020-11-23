@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jy.mapper.UserDao">
+
+    <!-- 公共片段   -->
+    <resultMap id="MapList" type="com.jy.entity.User">
+
+        <id property="id" column="id"></id>
+        <result property="username" column="name"></result>
+        <result property="password" column="password"></result>
+    </resultMap>
+
+    <select id="login" resultType="com.jy.entity.User">
+        SELECT * FROM users WHERE username=#{username} AND PASSWORD=#{password}
+    </select>
+
+
+
+
+
+
+
+
+    <!--<sql id="UserFindCriteria">-->
+
+
+    <!--</sql>-->
+    <!--<insert id="create" parameterType="com.jy.entity.User">-->
+        <!--insert into stu_info(stu_id,stu_name,stu_password)-->
+        <!--values (#{id},#{name},#{password})-->
+    <!--</insert>-->
+
+    <!--<delete id="delete" parameterType="com.jy.entity.User">-->
+        <!--delete from stu_info-->
+        <!--<include refid="UserFindCriteria"/>-->
+
+    <!--</delete>-->
+    
+
+</mapper>
